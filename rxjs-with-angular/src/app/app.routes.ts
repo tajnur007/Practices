@@ -10,6 +10,6 @@ export const appRoutes: Routes = [
   {
     path: '**',
     pathMatch: 'full',
-    component: AppComponent
+    redirectTo: ''
   }
 ];
