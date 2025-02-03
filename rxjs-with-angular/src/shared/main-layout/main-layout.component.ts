@@ -38,7 +38,11 @@ export class MainLayoutComponent {
 
   constructor(private router: Router) {}
 
-  navigateTo(url: string) {
+  isActive(url: string): boolean {
+    return this.router.url.includes(url);
+  }
+
+  navigateTo(url: string): void {
     this.router.navigateByUrl(url);
   }
 

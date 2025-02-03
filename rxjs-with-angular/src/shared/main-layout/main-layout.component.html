@@ -6,7 +6,8 @@
     <nav>
       <ul *ngFor="let navItem of navItems">
         <li
-          class="py-2 px-8 hover:bg-teal-800 transition-all duration-200 cursor-pointer text-lg"
+          class="py-2 px-8 hover:bg-teal-800 transition-all duration-200 cursor-pointer text-lg relative"
+          [ngClass]="{'bg-teal-800 active': isActive(navItem.route)}"
           (click)="navigateTo(navItem.route)">
           {{navItem.name}}
         </li>
