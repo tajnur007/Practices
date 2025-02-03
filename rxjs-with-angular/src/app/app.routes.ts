@@ -1,11 +1,22 @@
 import { Routes } from '@angular/router';
-import { AppComponent } from './app.component';
+import { MainLayoutComponent } from '../shared/main-layout/main-layout.component';
+import { ObservablesComponent } from './observables/observables.component';
 
 export const appRoutes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    component: AppComponent
+    redirectTo: 'observables'
+  },
+  {
+    path: '',
+    component: MainLayoutComponent,
+    children: [
+      {
+        path: 'observables',
+        component: ObservablesComponent
+      }
+    ]
   },
   {
     path: '**',
