@@ -2,9 +2,9 @@
   content: '';
   position: absolute;
   top: 0px;
-  left: 0px;
+  left: -25px;
   height: 100%;
-  width: 15px;
+  width: 44px;
   border-radius: 0 50% 50% 0;
   background-color: #cbfbf1;
 }
